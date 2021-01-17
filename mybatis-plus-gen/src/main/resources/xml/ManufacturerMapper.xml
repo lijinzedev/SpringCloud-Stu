@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.ManufacturerDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.Manufacturer">
+        <result column="MANU_ID" property="manuId" />
+        <result column="MANU_NAME" property="manuName" />
+        <result column="TEL_PERSON" property="telPerson" />
+        <result column="TEL_NO" property="telNo" />
+        <result column="EMAIL" property="email" />
+        <result column="REGIST_DATE" property="registDate" />
+        <result column="ADDR" property="addr" />
+        <result column="CREDIT_CODE" property="creditCode" />
+        <result column="PERSON_EMAIL" property="personEmail" />
+        <result column="PERSON_ADDR" property="personAddr" />
+        <result column="MANU_FULL_NAME" property="manuFullName" />
+        <result column="MANU_NO" property="manuNo" />
+        <result column="MANU_NO_HEX" property="manuNoHex" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        MANU_ID, MANU_NAME, TEL_PERSON, TEL_NO, EMAIL, REGIST_DATE, ADDR, CREDIT_CODE, PERSON_EMAIL, PERSON_ADDR, MANU_FULL_NAME, MANU_NO, MANU_NO_HEX
+    </sql>
+
+</mapper>

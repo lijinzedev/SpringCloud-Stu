@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.EvalAppDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.EvalApp">
+        <result column="APP_ID" property="appId" />
+        <result column="EVAL_STARS" property="evalStars" />
+        <result column="EVAL_DETAIL" property="evalDetail" />
+        <result column="OPERATOR_ID" property="operatorId" />
+        <result column="EVAL_DATE" property="evalDate" />
+        <result column="OPERATOR_TYPE" property="operatorType" />
+        <result column="ORDER_ID" property="orderId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        APP_ID, EVAL_STARS, EVAL_DETAIL, OPERATOR_ID, EVAL_DATE, OPERATOR_TYPE, ORDER_ID
+    </sql>
+
+</mapper>

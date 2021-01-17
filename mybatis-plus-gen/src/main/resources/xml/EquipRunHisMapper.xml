@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.EquipRunHisDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.EquipRunHis">
+        <result column="ASSENT_NO" property="assentNo" />
+        <result column="APP_ID" property="appId" />
+        <result column="UNINST_DATE" property="uninstDate" />
+        <result column="UNINST_INFO" property="uninstInfo" />
+        <result column="INST_DATE" property="instDate" />
+        <result column="INST_START_DATE" property="instStartDate" />
+        <result column="INST_END_DATE" property="instEndDate" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ASSENT_NO, APP_ID, UNINST_DATE, UNINST_INFO, INST_DATE, INST_START_DATE, INST_END_DATE
+    </sql>
+
+</mapper>

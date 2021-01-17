@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.OperatorDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.Operator">
+        <id column="OPERATOR_ID" property="operatorId" />
+        <result column="OPERATOR_NAME" property="operatorName" />
+        <result column="ORG_NO" property="orgNo" />
+        <result column="DEPT_NO" property="deptNo" />
+        <result column="PASS" property="pass" />
+        <result column="CREATE_DATE" property="createDate" />
+        <result column="CANCEL_DATE" property="cancelDate" />
+        <result column="VALID_FLAG" property="validFlag" />
+        <result column="TELPHONE" property="telphone" />
+        <result column="REAL_NAME" property="realName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        OPERATOR_ID, OPERATOR_NAME, ORG_NO, DEPT_NO, PASS, CREATE_DATE, CANCEL_DATE, VALID_FLAG, TELPHONE, REAL_NAME
+    </sql>
+
+</mapper>

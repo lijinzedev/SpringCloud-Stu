@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.OperatorLogDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.OperatorLog">
+        <id column="id" property="id" />
+        <result column="org_no" property="orgNo" />
+        <result column="log" property="log" />
+        <result column="operate_type" property="operateType" />
+        <result column="content" property="content" />
+        <result column="operate_date" property="operateDate" />
+        <result column="client" property="client" />
+        <result column="menu_id" property="menuId" />
+        <result column="operator_id" property="operatorId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, org_no, log, operate_type, content, operate_date, client, menu_id, operator_id
+    </sql>
+
+</mapper>

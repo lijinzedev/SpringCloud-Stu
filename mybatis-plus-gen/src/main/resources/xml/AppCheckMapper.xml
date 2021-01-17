@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.AppCheckDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.AppCheck">
+        <id column="REPORT_NO" property="reportNo" />
+        <result column="APP_TYPE" property="appType" />
+        <result column="DECLARE_MANU_ID" property="declareManuId" />
+        <result column="DECLARE_DATE" property="declareDate" />
+        <result column="RESP_NO" property="respNo" />
+        <result column="APP_NAME" property="appName" />
+        <result column="APP_VERSION" property="appVersion" />
+        <result column="OS_VERSION" property="osVersion" />
+        <result column="APP_INTRO" property="appIntro" />
+        <result column="ORG_NO" property="orgNo" />
+        <result column="REPORT_NAME" property="reportName" />
+        <result column="DATA_DATE" property="dataDate" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        REPORT_NO, APP_TYPE, DECLARE_MANU_ID, DECLARE_DATE, RESP_NO, APP_NAME, APP_VERSION, OS_VERSION, APP_INTRO, ORG_NO, REPORT_NAME, DATA_DATE
+    </sql>
+
+</mapper>

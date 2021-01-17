@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.OrderDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.Order">
+        <id column="ORDER_NO" property="orderNo" />
+        <result column="ORDER_NAME" property="orderName" />
+        <result column="ORDER_STATUS" property="orderStatus" />
+        <result column="STATUS_DATE" property="statusDate" />
+        <result column="DECLARE_DATE" property="declareDate" />
+        <result column="ORG_NO" property="orgNo" />
+        <result column="OPERATOR_ID" property="operatorId" />
+        <result column="SCHEME_ID" property="schemeId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ORDER_NAME, ORDER_NO, ORDER_STATUS, STATUS_DATE, DECLARE_DATE, ORG_NO, OPERATOR_ID, SCHEME_ID
+    </sql>
+
+</mapper>

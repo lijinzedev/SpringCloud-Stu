@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.MenuDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.Menu">
+        <id column="MENU_NO" property="menuNo" />
+        <result column="MENU_PRE" property="menuPre" />
+        <result column="MENU_NAME" property="menuName" />
+        <result column="MENU_PATH" property="menuPath" />
+        <result column="MENU_LEVEL" property="menuLevel" />
+        <result column="IS_LEAF" property="isLeaf" />
+        <result column="MENU_SEQ" property="menuSeq" />
+        <result column="COMPONENT" property="component" />
+        <result column="ICON" property="icon" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        MENU_NO, MENU_PRE, MENU_NAME, MENU_PATH, MENU_LEVEL, IS_LEAF, MENU_SEQ, COMPONENT, ICON
+    </sql>
+
+</mapper>

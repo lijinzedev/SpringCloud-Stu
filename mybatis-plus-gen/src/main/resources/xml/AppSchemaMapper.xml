@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.AppSchemaDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.AppSchema">
+        <id column="SCHEME_ID" property="schemeId" />
+        <result column="SCHEME_NAME" property="schemeName" />
+        <result column="CREATE_DATE" property="createDate" />
+        <result column="SCHEME_STATUS" property="schemeStatus" />
+        <result column="INTRODUCE" property="introduce" />
+        <result column="EQUIP_TYPE" property="equipType" />
+        <result column="PUBLIC_DATE" property="publicDate" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        SCHEME_ID, SCHEME_NAME, CREATE_DATE, SCHEME_STATUS, INTRODUCE, EQUIP_TYPE, PUBLIC_DATE
+    </sql>
+
+</mapper>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.AppDemandDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.AppDemand">
+        <id column="RESP_NO" property="respNo" />
+        <result column="RESP_NAME" property="respName" />
+        <result column="RESP_STATUS" property="respStatus" />
+        <result column="START_DATE" property="startDate" />
+        <result column="RESP_DESC" property="respDesc" />
+        <result column="RESP_TYPE" property="respType" />
+        <result column="PROD_DESC" property="prodDesc" />
+        <result column="EQUIP_TYPE" property="equipType" />
+        <result column="DECLARE_PESON" property="declarePeson" />
+        <result column="DECLARE_DATE" property="declareDate" />
+        <result column="PUBLIC_FLAG" property="publicFlag" />
+        <result column="PRIVACY_MONTHS" property="privacyMonths" />
+        <result column="VALID_FLAG" property="validFlag" />
+        <result column="CHECK_ADVICE" property="checkAdvice" />
+        <result column="CHANGE_ACTION" property="changeAction" />
+        <result column="CHANGE_FLAG" property="changeFlag" />
+        <result column="APP_NAME" property="appName" />
+        <result column="ORG_NO" property="orgNo" />
+        <result column="RESP_NO_PRE" property="respNoPre" />
+        <result column="REQUIRED_FLAG" property="requiredFlag" />
+        <result column="APP_SORT_CODE" property="appSortCode" />
+        <result column="APP_NAME_EN" property="appNameEn" />
+        <result column="NAME_CODE" property="nameCode" />
+        <result column="ADAPT_ANDROID" property="adaptAndroid" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        RESP_NAME, RESP_STATUS, START_DATE, RESP_DESC, RESP_NO, RESP_TYPE, PROD_DESC, EQUIP_TYPE, DECLARE_PESON, DECLARE_DATE, PUBLIC_FLAG, PRIVACY_MONTHS, VALID_FLAG, CHECK_ADVICE, CHANGE_ACTION, CHANGE_FLAG, APP_NAME, ORG_NO, RESP_NO_PRE, REQUIRED_FLAG, APP_SORT_CODE, APP_NAME_EN, NAME_CODE, ADAPT_ANDROID
+    </sql>
+
+</mapper>

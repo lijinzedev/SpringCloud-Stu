@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.AppDemandYDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.AppDemandY">
+        <result column="APP_NUM" property="appNum" />
+        <result column="EQUIP_TYPE" property="equipType" />
+        <result column="ORG_NO" property="orgNo" />
+        <result column="APP_SORT_CODE" property="appSortCode" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        APP_NUM, EQUIP_TYPE, ORG_NO, APP_SORT_CODE
+    </sql>
+
+</mapper>

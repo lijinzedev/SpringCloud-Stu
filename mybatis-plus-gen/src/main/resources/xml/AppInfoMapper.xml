@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.AppInfoDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.AppInfo">
+        <id column="APP_ID" property="appId" />
+        <result column="APP_NO" property="appNo" />
+        <result column="APP_NAME" property="appName" />
+        <result column="APP_STATUS" property="appStatus" />
+        <result column="APP_DATE" property="appDate" />
+        <result column="APP_TYPE" property="appType" />
+        <result column="MANU_ID" property="manuId" />
+        <result column="EQUIP_TYPE" property="equipType" />
+        <result column="INTRODUCE" property="introduce" />
+        <result column="VERSION" property="version" />
+        <result column="PRODUCT_PUB" property="productPub" />
+        <result column="ICON_ID" property="iconId" />
+        <result column="SOLD_FLAG" property="soldFlag" />
+        <result column="VESION_FLAG" property="vesionFlag" />
+        <result column="PUBLIC_DATE" property="publicDate" />
+        <result column="REQUIRED_FLAG" property="requiredFlag" />
+        <result column="APP_SORT_CODE" property="appSortCode" />
+        <result column="APP_EVAL" property="appEval" />
+        <result column="OS_VERSION" property="osVersion" />
+        <result column="REPORT_NO" property="reportNo" />
+        <result column="USE_COST" property="useCost" />
+        <result column="APP_PKG_SIZE" property="appPkgSize" />
+        <result column="APP_VERINTRO" property="appVerintro" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        APP_ID, APP_NO, APP_NAME, APP_STATUS, APP_DATE, APP_TYPE, MANU_ID, EQUIP_TYPE, INTRODUCE, VERSION, PRODUCT_PUB, ICON_ID, SOLD_FLAG, VESION_FLAG, PUBLIC_DATE, REQUIRED_FLAG, APP_SORT_CODE, APP_EVAL, OS_VERSION, REPORT_NO, USE_COST, APP_PKG_SIZE, APP_VERINTRO
+    </sql>
+
+</mapper>

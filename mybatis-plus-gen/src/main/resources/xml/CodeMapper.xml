@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.creaway.mapper.CodeDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.creaway.model.Code">
+        <id column="CODE_ID" property="codeId" />
+        <result column="CODE_SORT_ID" property="codeSortId" />
+        <result column="code_NAME" property="codeName" />
+        <result column="CODE_TYPE" property="codeType" />
+        <result column="code_VALUE" property="codeValue" />
+        <result column="MAINT_PERSON" property="maintPerson" />
+        <result column="DISP_SN" property="dispSn" />
+        <result column="VALID_FLAG" property="validFlag" />
+        <result column="EFFECT_DATE" property="effectDate" />
+        <result column="CONTENT1" property="content1" />
+        <result column="CONTENT2" property="content2" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        CODE_ID, CODE_SORT_ID, code_NAME, CODE_TYPE, code_VALUE, MAINT_PERSON, DISP_SN, VALID_FLAG, EFFECT_DATE, CONTENT1, CONTENT2
+    </sql>
+
+</mapper>
