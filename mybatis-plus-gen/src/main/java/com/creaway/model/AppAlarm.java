@@ -12,6 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -26,6 +27,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @TableName("a_app_alarm")
 @ApiModel(value="AppAlarm对象", description="app预警信息表")
+@Mapper
 public class AppAlarm extends Model<AppAlarm> {
 
     private static final long serialVersionUID = 1L;

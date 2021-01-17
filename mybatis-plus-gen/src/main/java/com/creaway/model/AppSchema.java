@@ -42,7 +42,7 @@ public class AppSchema extends Model<AppSchema> {
     @TableField("CREATE_DATE")
     private LocalDateTime createDate;
 
-    @ApiModelProperty(value = "方案状态"0"待发布 “1”发布")
+    @ApiModelProperty(value = "方案状态0待发布1发布")
     @TableField("SCHEME_STATUS")
     private String schemeStatus;
 
