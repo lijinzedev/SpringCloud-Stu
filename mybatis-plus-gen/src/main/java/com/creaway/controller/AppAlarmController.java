@@ -26,7 +26,7 @@ public class AppAlarmController {
     AppAlarmService appAlarmService;
 
     @GetMapping("/")
-    public void getall() {
+    public Object getall() {
         //        Main.autoGenerator().execute();
         AppAlarm entity = new AppAlarm();
         entity.setAlarmDate(LocalDateTime.now());
@@ -34,6 +34,6 @@ public class AppAlarmController {
         entity.setAlarmNo(1);
         entity.setAlarmStatus("1");
         entity.setInfo("test");
-        appAlarmService.list();
+        return appAlarmService.list();
     }
 }
